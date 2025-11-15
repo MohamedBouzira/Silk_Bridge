@@ -1,3 +1,11 @@
+# Silk_Bridge  
+My CTF for NexZero 2024
+
+**Difficulty:** Medium → Hard  
+**Estimated Time:** 30 minutes to 2 days
+
+---
+
 ## 🚀 Usage
 
 ```bash

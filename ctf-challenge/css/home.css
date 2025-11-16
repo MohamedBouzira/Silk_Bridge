@@ -1,0 +1,206 @@
+/* Dark Web Theme */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+:root {
+    --dark-bg: #0a0a0a;
+    --darker-bg: #050505;
+    --blood-red: #ff0000;
+    --dark-red: #8b0000;
+    --terminal-green: #00ff00;
+    --glitch-red: #ff3333;
+    --text-color: #ffffff;
+    --bitcoin-yellow: #ffd700;
+    --card-hover: rgba(255, 0, 0, 0.6); /* Card hover effect */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    font-family: 'Share Tech Mono', monospace;
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-image: 
+        linear-gradient(45deg, rgba(255,0,0,0.1) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(255,0,0,0.1) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(255,0,0,0.1) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(255,0,0,0.1) 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    animation: bgMovement 20s infinite linear;
+}
+
+/* Add background movement animation */
+@keyframes bgMovement {
+    0% { background-position: 0 0, 0 10px, 10px -10px, -10px 0px; }
+    50% { background-position: 10px 10px, 10px 20px, 20px 0px, 0px 10px; }
+    100% { background-position: 0 0, 0 10px, 10px -10px, -10px 0px; }
+}
+
+/* Title Section */
+.title h1 {
+    color: var(--blood-red);
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(255,0,0,0.3);
+    font-family: 'Share Tech Mono', monospace;
+    letter-spacing: 2px;
+    animation: glitch 1s infinite;
+}
+
+.title .subtitle {
+    color: var(--terminal-green);
+    font-size: 1.2em;
+    margin-bottom: 2rem;
+}
+
+/* Glitch Effect Animation */
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+/* Welcome Card */
+.welcome-card {
+    background-color: var(--darker-bg);
+    border: 1px solid var(--blood-red);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255,0,0,0.3);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.welcome-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+}
+
+.welcome-card h2 {
+    color: var(--terminal-green);
+    margin-bottom: 1rem;
+    font-size: 1.8em;
+}
+
+.welcome-card p {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-size: 1.2em;
+}
+
+.welcome-card .bitcoin {
+    color: var(--bitcoin-yellow);
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+/* Hitman Cards */
+.hitman-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hitman-card {
+    background-color: var(--darker-bg);
+    border: 1px solid var(--blood-red);
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hitman-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+}
+
+.hitman-card h2 {
+    color: var(--terminal-green);
+    margin-bottom: 1rem;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.hitman-card p {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.hitman-card .price {
+    color: var(--bitcoin-yellow);
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.hitman-card form {
+    margin-top: 1rem;
+}
+
+.hitman-card input[type="submit"] {
+    width: 100%;
+    background-color: var(--darker-bg);
+    color: var(--terminal-green);
+    border: 2px solid var(--terminal-green);
+    padding: 0.8rem;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hitman-card input[type="submit"]:hover {
+    background-color: var(--terminal-green);
+    color: #000;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--darker-bg);
+    border-top: 1px solid var(--blood-red);
+    padding: 2rem;
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.footer p {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.footer .warning {
+    color: var(--blood-red);
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .hitman-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hitman-cards {
+        grid-template-columns: 1fr;
+    }
+}

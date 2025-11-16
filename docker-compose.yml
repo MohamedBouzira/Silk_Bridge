@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  web:
+    build: ./ctf-challenge
+    ports:
+      - "80:80"
+    volumes:
+      - ./bot:/var/bot
+    dns:
+      - 8.8.8.8           # Fix DNS resolution inside container
+    networks:
+      - ctf-net
+
+  bot:
+    build: ./bot
+    volumes:
+      - ./bot/queue.txt:/usr/src/app/queue.txt
+    command: node bot.js
+    networks:
+      - ctf-net
+
+networks:
+  ctf-net:

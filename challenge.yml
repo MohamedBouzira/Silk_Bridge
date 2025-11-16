@@ -1,0 +1,25 @@
+name: "Silk Bridge"
+author: "BZR"
+category: web
+difficulty: medium
+description: |
+  > sometimes the hardest exploit, is knowing when you stop forcing a door and start climbing throught the window.
+  > JUST LET GOO
+  
+  **Author** : BZR
+flags:
+  - nexus{ssrf_2_xss_bzr_should_not_code}
+
+topics:
+  - XSSRF
+
+# DO NOT CHANGE
+#
+value: 500
+type: dynamic
+extra:
+    initial: 500
+    decay: 15
+    minimum: 50
+state: hidden
+version: "0.1"

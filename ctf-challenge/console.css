@@ -1,0 +1,148 @@
+/* Console Theme */
+:root {
+    --console-bg: #000;
+    --console-text: #00ff00;
+    --console-border: #00ff00;
+    --console-error: #ff0000;
+    --console-prompt: #00ff00;
+    --body-bg: #0a0a0a;
+    --blood-red: #ff0000;
+}
+
+/* Body Styling */
+body {
+    background-color: var(--body-bg);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: 
+        linear-gradient(45deg, rgba(255,0,0,0.1) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(255,0,0,0.1) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(255,0,0,0.1) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(255,0,0,0.1) 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+/* Console Container */
+.console-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #000;
+    border: 1px solid var(--blood-red);
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    position: relative;
+}
+
+/* Console Title */
+.console-title {
+    color: var(--console-text);
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+}
+
+/* Console Output Area */
+.console-output {
+    background-color: var(--console-bg);
+    color: var(--console-text);
+    padding: 20px;
+    height: 600px;
+    width: 100%;
+    overflow-y: auto;
+    font-family: 'Courier New', monospace;
+    border: 1px solid var(--console-border);
+    margin-bottom: 20px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 1.1em;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+/* Console Output Text */
+.console-output span {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+/* Console Error Messages */
+.console-output .error {
+    color: var(--console-error);
+    margin-bottom: 0.5rem;
+}
+
+/* Console Input Area */
+.console-input {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Console Input Field */
+.console-input input[type="text"] {
+    flex: 1;
+    background-color: var(--console-bg);
+    color: var(--console-text);
+    border: 1px solid var(--console-border);
+    padding: 0.8rem;
+    font-family: 'Courier New', monospace;
+    font-size: 1.1em;
+    outline: none;
+    width: 100%;
+}
+
+/* Console Button */
+.console-input button {
+    background-color: #050505;
+    color: var(--console-text);
+    border: 2px solid var(--console-border);
+    padding: 0.8rem 1.5rem;
+    font-family: 'Courier New', monospace;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+/* Console Button Hover */
+.console-input button:hover {
+    background-color: var(--console-text);
+    color: #000;
+}
+
+/* Console Prompt */
+.console-prompt {
+    color: var(--console-prompt);
+    margin-right: 0.5rem;
+    font-family: 'Courier New', monospace;
+    font-size: 1.1em;
+    white-space: nowrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .console-container {
+        padding: 1rem;
+        margin: 1rem;
+    }
+    
+    .console-output {
+        height: 300px;
+    }
+    
+    .console-input {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .console-input button {
+        width: 100%;
+    }
+} 

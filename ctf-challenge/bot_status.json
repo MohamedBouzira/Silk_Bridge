@@ -1,0 +1,7 @@
+{
+    "status": "active",
+    "note": "Security bot responsible for controlled evaluation and internal fetch handling and security reasons",
+    "working_Dir": "console.php",
+    "host": "bot",
+    "containered": "True"
+  }

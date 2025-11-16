@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow: /secret.php
+Disallow: /dev_chat.php
+Allow: /

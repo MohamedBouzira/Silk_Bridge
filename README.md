@@ -33,6 +33,8 @@ Bypass SSRF protection using client-side scripting + XSS to create an internal r
    - The bot only visits a page when an internal server-side `fetch()` is triggered.
 5. Using SSRF, you trigger an internal fetch → the bot visits your console → your JavaScript executes → the bot fetches `secret.php` and exfiltrates the flag.
 
+   `Alert: the thing here is that the bot working from seperate container, if you think about it , you need to call the website by its 'domain' or 'web' , the bot won't reach the website if you call it 'localhost' `
+
 This "bridge" between SSRF → internal fetch → bot JS execution is why the challenge is called **Silk Bridge**.
 
 ---

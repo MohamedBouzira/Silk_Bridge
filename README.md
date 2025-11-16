@@ -2,7 +2,7 @@
 My CTF for NexZero 2024
 
 **Difficulty:** Medium → Hard  
-**Estimated Time:** 30 minutes to 2 daysa
+**Estimated Time:** 30 minutes to 2 days
 
 
 **note:**

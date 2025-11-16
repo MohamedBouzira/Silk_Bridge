@@ -2,7 +2,12 @@
 My CTF for NexZero 2024
 
 **Difficulty:** Medium → Hard  
-**Estimated Time:** 30 minutes to 2 days
+**Estimated Time:** 30 minutes to 2 daysa
+
+
+**note:**
+   the challenge was black box , so the source code is kinda massed-up and i used some dirty tricks because i had no time , so don't focus on the source code 
+   and `ENJOY`
 
 ---
 

@@ -1,5 +1,5 @@
 # Silk_Bridge  
-My CTF for NexZero 2024
+Client-Side chain based CTF Challenge
 
 **Difficulty:** Medium → Hard  
 **Estimated Time:** 30 minutes to 2 days
